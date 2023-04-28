@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const diceGames_controllers_1 = require("../controllers/diceGames.controllers");
+const router = (0, express_1.Router)();
+router.post("/player/:id", diceGames_controllers_1.playersRollDice);
+router.get('/ranking', diceGames_controllers_1.generalRanking);
+router.get('/better-player', diceGames_controllers_1.getBetPlayer);
+router.get('/worst-player', diceGames_controllers_1.getWorstPlayer);
+router.delete('/delete/:id', diceGames_controllers_1.deleteGames);
+exports.default = router;

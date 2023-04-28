@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const palyers_controllers_1 = require("../controllers/palyers.controllers");
+const router = (0, express_1.Router)();
+router.get('/get-all-players', palyers_controllers_1.getAllPlayer);
+router.get('/get-player/:id', palyers_controllers_1.getOnePlayer);
+router.put('/update-player/:id', palyers_controllers_1.updateName);
+router.delete('/delete-player/:id', palyers_controllers_1.deletePlayer);
+exports.default = router;
